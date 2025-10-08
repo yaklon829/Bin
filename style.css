@@ -10,7 +10,7 @@ body {
   line-height: 1.6;
   color: #333;
   background: #fff;
-  overflow-x: hidden; /* 防止橫向捲動 */
+  overflow-x: hidden;
 }
 
 img {
@@ -76,7 +76,6 @@ img {
 
 /* 首屏 Banner */
 .hero {
-  position: relative;
   text-align: center;
   background: #f0f8ff;
   padding: 40px 20px;
@@ -182,66 +181,58 @@ img {
   font-size: 1.2rem;
 }
 
-/* 成果展示 */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+/* 清潔成果輪播 */
+.gallery-slider {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  position: relative;
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ddd;
 }
 
-.gallery-item {
-  text-align: center;
-}
-
-.gallery-item figcaption {
-  margin-top: 8px;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-/* 聯絡我們 */
-.contact-inner {
+.gallery-track {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  align-items: center;
+  animation: scrollGallery 40s linear infinite;
 }
 
-.contact-info {
-  flex: 1 1 300px;
+.gallery-track img {
+  width: 300px;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  flex-shrink: 0;
 }
 
-.contact-list {
-  list-style: none;
-  margin: 15px 0;
-}
-
-.contact-list li {
-  margin-bottom: 8px;
-}
-
-.contact-brand {
-  flex: 1 1 300px;
-  text-align: center;
+@keyframes scrollGallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 /* 報價試算 */
-.quote fieldset {
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 15px;
-  margin-bottom: 20px;
+.quote-block {
+  margin-bottom: 25px;
 }
 
-.quote legend {
-  font-weight: 600;
-  color: #0077cc;
-  padding: 0 8px;
-}
-
-.quote label {
+.quote-block label {
   display: block;
-  margin: 5px 0;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.quote-block input,
+.quote-block select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 .result-box {
@@ -255,28 +246,6 @@ img {
 .result-box ul {
   margin: 10px 0;
   padding-left: 20px;
-}
-
-/* 頁尾 */
-.footer {
-  background: #111;
-  color: #ccc;
-  padding: 20px;
-  text-align: center;
-}
-
-.footer-nav {
-  margin-top: 10px;
-}
-
-.footer-nav a {
-  color: #ccc;
-  margin: 0 10px;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  color: #fff;
 }
 
 /* 響應式設計 */
@@ -307,4 +276,62 @@ img {
   .section h2 {
     font-size: 1.5rem;
   }
+
+  .gallery-track {
+    animation: none;
+  }
+
+  .gallery-track img {
+    width: 220px;
+    margin-right: 12px;
+  }
+}
+
+/* 聯絡表單 */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  align-self: flex-start;
+}
+
+.line-contact {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.line-contact .btn {
+  margin-top: 10px;
+}
+
+/* 回頂按鈕 */
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0077cc;
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  text-decoration: none;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s;
+  z-index: 999;
+}
+
+.back-to-top:hover {
+  background: #005fa3;
 }
