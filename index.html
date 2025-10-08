@@ -23,6 +23,7 @@
         <li><a href="#about">關於我們</a></li>
         <li><a href="#services">服務項目</a></li>
         <li><a href="#gallery">成果展示</a></li>
+        <li><a href="#quote">報價試算</a></li>
         <li><a href="#contact" class="btn btn-outline">立即預約</a></li>
       </ul>
     </div>
@@ -46,7 +47,7 @@
       <div class="about-text">
         <h2>關於我們</h2>
         <p>
-          一家倫清潔由 <strong>焦瑞彬</strong> 負責，專注居家與商業場域的專業清潔與保養服務。  
+          <strong>一家倫清潔</strong> 由 <strong>焦瑞彬</strong> 負責，專注居家與商業場域的專業清潔與保養服務。  
           我們以標準化流程、環保清潔用品與細緻品質為核心，讓每位客戶都能安心把空間交給我們。
         </p>
         <ul class="feature-list">
@@ -108,45 +109,28 @@
     </div>
   </section>
 
-  <!-- 聯絡我們 -->
-  <section id="contact" class="section contact">
-    <div class="container contact-inner">
-      <div class="contact-info">
-        <h2>聯絡我們</h2>
-        <p>歡迎透過以下方式預約或諮詢，我們會在工作時段內盡速回覆。</p>
-        <ul class="contact-list">
-          <li><strong>負責人：</strong>焦瑞彬</li>
-          <li><strong>電話：</strong><a href="tel:0968839799">0968-839-799</a></li>
-          <li><strong>Email：</strong><a href="mailto:">（尚未提供）</a></li>
-          <li><strong>LINE：</strong>ID：remember80</li>
-        </ul>
-        <a href="tel:0968839799" class="btn btn-primary">立即來電預約</a>
-      </div>
-      <div class="contact-brand">
-        <img src="img/3.png" alt="一家倫清潔 品牌識別" />
-      </div>
-    </div>
-  </section>
+  <!-- 報價試算 -->
+  <section id="quote" class="section quote">
+    <div class="container">
+      <h2>一家倫清潔｜工程報價試算</h2>
+      <p>請勾選需要的項目，系統會自動計算總價，方便您截圖回報。</p>
 
-  <!-- 頁尾 -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <p>© 2025 一家倫清潔. 版權所有</p>
-      <nav class="footer-nav">
-        <a href="#about">關於我們</a>
-        <a href="#services">服務</a>
-        <a href="#contact">聯絡</a>
-      </nav>
-    </div>
-  </footer>
+      <form id="quoteForm">
+        <fieldset>
+          <legend>室內天花板</legend>
+          <label><input type="checkbox" value="1300"> 水泥漆_矽酸鈣板天花板 (坪) - 1300</label><br>
+          <label><input type="checkbox" value="400"> 水泥漆_RC天花板 (坪) - 400</label><br>
+          <label><input type="checkbox" value="1700"> 乳膠漆_矽酸鈣板天花板 (坪) - 1700</label><br>
+          <label><input type="checkbox" value="1200"> 乳膠漆_RC天花板 (坪) - 1200</label><br>
+          <label><input type="checkbox" value="200"> 窗簾盒 (尺) - 200</label><br>
+          <label><input type="checkbox" value="80"> 間接照明 (尺) - 80</label><br>
+          <label><input type="checkbox" value="1300"> 包樑天花板 (尺) - 1300</label><br>
+          <label><input type="checkbox" value="100"> 天花線板/腰帶/窗檯刷漆 (尺) - 100</label><br>
+        </fieldset>
 
-  <!-- 行動版選單切換 -->
-  <script>
-    const toggle = document.querySelector('.nav-toggle');
-    const links = document.querySelector('.nav-links');
-    toggle?.addEventListener('click', () => {
-      links.classList.toggle('open');
-    });
-  </script>
-</body>
-</html>
+        <fieldset>
+          <legend>室內牆面</legend>
+          <label><input type="checkbox" value="400"> 壁面刷新 (坪) - 400</label><br>
+          <label><input type="checkbox" value="1100"> 水泥漆_矽酸鈣板牆面 (坪) - 1100</label><br>
+          <label><input type="checkbox" value="1000"> 水泥漆_跳色牆面 (坪) - 1000</label><br>
+          <label><input type="checkbox" value="1400"> 乳膠漆_矽酸鈣板
