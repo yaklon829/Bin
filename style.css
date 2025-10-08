@@ -1,45 +1,278 @@
+/* 全域設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    background: #f8f8f8;
+  font-family: 'Noto Sans TC', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  overflow-x: hidden; /* 防止橫向捲動 */
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 30px 0 10px 0;
-    text-align: center;
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-header nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-    background: #fff;
-    margin-bottom: 20px;
-    border-radius: 8px;
+/* 導覽列 */
+.navbar {
+  background: #0077cc;
+  color: #fff;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-footer {
-    background: #222;
-    color: #aaa;
-    text-align: center;
-    padding: 20px 0;
+.nav-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-form input, form textarea {
+.brand {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a.btn-outline {
+  border: 1px solid #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: #fff;
+}
+
+/* 首屏 Banner */
+.hero {
+  position: relative;
+  text-align: center;
+  background: #f0f8ff;
+  padding: 40px 20px;
+}
+
+.hero-brand {
+  max-width: 300px;
+  margin: 0 auto 20px;
+}
+
+.hero-text h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.hero-text .subtitle {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #0077cc;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #005fa3;
+}
+
+.btn-outline {
+  border: 1px solid #fff;
+  color: #fff;
+}
+
+/* 區塊通用 */
+.section {
+  padding: 60px 20px;
+}
+
+.section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.section-lead {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #666;
+}
+
+/* 關於我們 */
+.about-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-text {
+  flex: 1 1 300px;
+}
+
+.about-media {
+  flex: 1 1 300px;
+}
+
+/* 服務項目 */
+.service-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.service-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  flex: 1 1 280px;
+  max-width: 320px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+}
+
+.service-card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+}
+
+/* 成果展示 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-item figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 聯絡我們 */
+.contact-inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+}
+
+.contact-info {
+  flex: 1 1 300px;
+}
+
+.contact-list {
+  list-style: none;
+  margin: 15px 0;
+}
+
+.contact-list li {
+  margin-bottom: 8px;
+}
+
+.contact-brand {
+  flex: 1 1 300px;
+  text-align: center;
+}
+
+/* 頁尾 */
+.footer {
+  background: #111;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-nav {
+  margin-top: 10px;
+}
+
+.footer-nav a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: #fff;
+}
+
+/* 響應式設計 */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0077cc;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-toggle {
     display: block;
-    width: 100%;
-    margin-bottom: 10px;
-    padding: 8px;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+  }
+
+  .hero-text h1 {
+    font-size: 1.5rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
 }
