@@ -109,124 +109,171 @@
     </div>
   </section>
 
-<!-- 報價試算 -->
-<section id="quote" class="section quote">
-  <div class="container">
-    <h2>一家倫清潔｜工程報價試算</h2>
-    <p>請在各分類中選擇需要的項目（可多選），系統會自動計算總價，方便您截圖回報。</p>
+  <!-- 報價試算 -->
+  <section id="quote" class="section quote">
+    <div class="container">
+      <h2>一家倫清潔｜工程報價試算</h2>
+      <p>請輸入坪數/數量並選擇項目（可多選），系統會自動計算總價，方便您截圖回報。</p>
 
-    <!-- 室內天花板 -->
-    <label for="ceiling">室內天花板：</label>
-    <select id="ceiling" multiple onchange="updateQuote()">
-      <option value="1300">水泥漆_矽酸鈣板天花板 (坪) - 1300</option>
-      <option value="400">水泥漆_RC天花板 (坪) - 400</option>
-      <option value="1700">乳膠漆_矽酸鈣板天花板 (坪) - 1700</option>
-      <option value="1200">乳膠漆_RC天花板 (坪) - 1200</option>
-      <option value="200">窗簾盒 (尺) - 200</option>
-      <option value="80">間接照明 (尺) - 80</option>
-      <option value="1300">包樑天花板 (尺) - 1300</option>
-      <option value="100">天花線板/腰帶/窗檯刷漆 (尺) - 100</option>
-    </select>
+      <!-- 室內天花板 -->
+      <div class="quote-block">
+        <label>室內天花板 坪數：</label>
+        <input type="number" id="ceilingQty" placeholder="請輸入坪數" min="0" onchange="updateQuote()">
+        <select id="ceiling" multiple onchange="updateQuote()">
+          <option value="1300">水泥漆_矽酸鈣板天花板 (坪) - 1300</option>
+          <option value="400">水泥漆_RC天花板 (坪) - 400</option>
+          <option value="1700">乳膠漆_矽酸鈣板天花板 (坪) - 1700</option>
+          <option value="1200">乳膠漆_RC天花板 (坪) - 1200</option>
+          <option value="200">窗簾盒 (尺) - 200</option>
+          <option value="80">間接照明 (尺) - 80</option>
+          <option value="1300">包樑天花板 (尺) - 1300</option>
+          <option value="100">天花線板/腰帶/窗檯刷漆 (尺) - 100</option>
+        </select>
+      </div>
 
-    <!-- 室內牆面 -->
-    <label for="wall">室內牆面：</label>
-    <select id="wall" multiple onchange="updateQuote()">
-      <option value="400">壁面刷新 (坪) - 400</option>
-      <option value="1100">水泥漆_矽酸鈣板牆面 (坪) - 1100</option>
-      <option value="1000">水泥漆_跳色牆面 (坪) - 1000</option>
-      <option value="1400">乳膠漆_矽酸鈣板牆面 (坪) - 1400</option>
-      <option value="1000">乳膠漆_RC牆面 (坪) - 1000</option>
-      <option value="1300">乳膠漆_跳色牆面 (坪) - 1300</option>
-    </select>
+      <!-- 室內牆面 -->
+      <div class="quote-block">
+        <label>室內牆面 坪數：</label>
+        <input type="number" id="wallQty" placeholder="請輸入坪數" min="0" onchange="updateQuote()">
+        <select id="wall" multiple onchange="updateQuote()">
+          <option value="400">壁面刷新 (坪) - 400</option>
+          <option value="1100">水泥漆_矽酸鈣板牆面 (坪) - 1100</option>
+                   <option value="1000">水泥漆_跳色牆面 (坪) - 1000</option>
+          <option value="1400">乳膠漆_矽酸鈣板牆面 (坪) - 1400</option>
+          <option value="1000">乳膠漆_RC牆面 (坪) - 1000</option>
+          <option value="1300">乳膠漆_跳色牆面 (坪) - 1300</option>
+        </select>
+      </div>
 
-    <!-- 特殊塗料 -->
-    <label for="special">特殊塗料：</label>
-    <select id="special" multiple onchange="updateQuote()">
-      <option value="3000">樂土灰泥含潑水劑 (坪) - 3000</option>
-      <option value="5000">司曼特灰泥及表面平光蠟 (坪) - 5000</option>
-      <option value="4000">樂趣清水模 (坪) - 4000</option>
-      <option value="5000">富士仿岩漆 (坪) - 5000</option>
-    </select>
+      <!-- 特殊塗料 -->
+      <div class="quote-block">
+        <label>特殊塗料 坪數：</label>
+        <input type="number" id="specialQty" placeholder="請輸入坪數" min="0" onchange="updateQuote()">
+        <select id="special" multiple onchange="updateQuote()">
+          <option value="3000">樂土灰泥含潑水劑 (坪) - 3000</option>
+          <option value="5000">司曼特灰泥及表面平光蠟 (坪) - 5000</option>
+          <option value="4000">樂趣清水模 (坪) - 4000</option>
+          <option value="5000">富士仿岩漆 (坪) - 5000</option>
+        </select>
+      </div>
 
-    <!-- 其他刷漆 -->
-    <label for="other">其他刷漆：</label>
-    <select id="other" multiple onchange="updateQuote()">
-      <option value="1800">門組刷漆 (組) - 1800</option>
-      <option value="3500">實木門片噴漆 (組) - 3500</option>
-      <option value="30">踢腳板油漆 (尺) - 30</option>
-      <option value="100">線板油漆 (尺) - 100</option>
-      <option value="800">矮櫃塗裝 (波麗板/塗裝板) - 800</option>
-      <option value="1600">矮櫃塗裝 (美耐板/夾板/密集板) - 1600</option>
-      <option value="1400">高櫃塗裝 (波麗板/塗裝板) - 1400</option>
-      <option value="2800">高櫃塗裝 (美耐板/夾板/密集板) - 2800</option>
-    </select>
+      <!-- 其他刷漆 -->
+      <div class="quote-block">
+        <label>其他刷漆 數量：</label>
+        <input type="number" id="otherQty" placeholder="請輸入數量" min="0" onchange="updateQuote()">
+        <select id="other" multiple onchange="updateQuote()">
+          <option value="1800">門組刷漆 (組) - 1800</option>
+          <option value="3500">實木門片噴漆 (組) - 3500</option>
+          <option value="30">踢腳板油漆 (尺) - 30</option>
+          <option value="100">線板油漆 (尺) - 100</option>
+          <option value="800">矮櫃塗裝 (波麗板/塗裝板) - 800</option>
+          <option value="1600">矮櫃塗裝 (美耐板/夾板/密集板) - 1600</option>
+          <option value="1400">高櫃塗裝 (波麗板/塗裝板) - 1400</option>
+          <option value="2800">高櫃塗裝 (美耐板/夾板/密集板) - 2800</option>
+        </select>
+      </div>
 
-    <!-- 地板材料 -->
-    <label for="floor">地板材料：</label>
-    <select id="floor" multiple onchange="updateQuote()">
-      <option value="0">超耐磨木地板 (比利時 PERGO) - 依坪數報價</option>
-      <option value="0">超耐磨木地板 (Egger) - 依坪數報價</option>
-      <option value="0">超耐磨木地板 (台灣品牌 諾達) - 依坪數報價</option>
-    </select>
+      <!-- 地板材料 -->
+      <div class="quote-block">
+        <label>地板材料 坪數：</label>
+        <input type="number" id="floorQty" placeholder="請輸入坪數" min="0" onchange="updateQuote()">
+        <select id="floor" multiple onchange="updateQuote()">
+          <option value="0">超耐磨木地板 (比利時 PERGO) - 依坪數報價</option>
+          <option value="0">超耐磨木地板 (Egger) - 依坪數報價</option>
+          <option value="0">超耐磨木地板 (台灣品牌 諾達) - 依坪數報價</option>
+        </select>
+      </div>
 
-    <!-- 木工工法 -->
-    <label for="wood">木工工法：</label>
-    <select id="wood" multiple onchange="updateQuote()">
-      <option value="0">木作天花板 - 依坪數報價</option>
-      <option value="0">木作窗簾盒 - 依尺數報價</option>
-      <option value="0">木作包樑 - 依尺數報價</option>
-      <option value="0">木作冷氣盒框 - 依尺數報價</option>
-      <option value="0">木作隔間 - 依坪數報價</option>
-    </select>
+      <!-- 木工工法 -->
+      <div class="quote-block">
+        <label>木工工法 坪數/尺數：</label>
+        <input type="number" id="woodQty" placeholder="請輸入數量" min="0" onchange="updateQuote()">
+        <select id="wood" multiple onchange="updateQuote()">
+          <option value="0">木作天花板 - 依坪數報價</option>
+          <option value="0">木作窗簾盒 - 依尺數報價</option>
+          <option value="0">木作包樑 - 依尺數報價</option>
+          <option value="0">木作冷氣盒框 - 依尺數報價</option>
+          <option value="0">木作隔間 - 依坪數報價</option>
+        </select>
+      </div>
 
-    <!-- 油漆工法 -->
-    <label for="paint">油漆工法：</label>
-    <select id="paint" multiple onchange="updateQuote()">
-      <option value="0">天花板油漆 (新作天花) - 依坪數報價</option>
-      <option value="0">木作隔間油漆 - 依坪數報價</option>
-      <option value="0">原有牆面刷新 (新成屋) - 依坪數報價</option>
-      <option value="0">原有牆面跳色 (新成屋) - 依坪數報價</option>
-      <option value="0">木作窗簾盒/天花板包樑/冷氣盒油漆 - 依尺數報價</option>
-    </select>
+      <!-- 油漆工法 -->
+      <div class="quote-block">
+        <label>油漆工法 坪數/尺數：</label>
+        <input type="number" id="paintQty" placeholder="請輸入數量" min="0" onchange="updateQuote()">
+        <select id="paint" multiple onchange="updateQuote()">
+          <option value="0">天花板油漆 (新作天花) - 依坪數報價</option>
+          <option value="0">木作隔間油漆 - 依坪數報價</option>
+          <option value="0">原有牆面刷新 (新成屋) - 依坪數報價</option>
+          <option value="0">原有牆面跳色 (新成屋) - 依坪數報價</option>
+          <option value="0">木作窗簾盒/天花板包樑/冷氣盒油漆 - 依尺數報價</option>
+        </select>
+      </div>
 
-    <!-- 水電工法 -->
-    <label for="electric">水電工法：</label>
-    <select id="electric" multiple onchange="updateQuote()">
-      <option value="0">LED崁燈 (含施工) - 依盞數報價</option>
-      <option value="0">開關插座更換 (含施工) - 依組數報價</option>
-      <option value="0">開關插座新增與延長 (含施工) - 依組數報價</option>
-      <option value="0">開關專用迴路 (含施工) - 依組數報價</option>
-      <option value="0">接強弱電專用迴路 (含施工) - 依組數報價</option>
-    </select>
+      <!-- 水電工法 -->
+      <div class="quote-block">
+        <label>水電工法 數量：</label>
+        <input type="number" id="electricQty" placeholder="請輸入數量" min="0" onchange="updateQuote()">
+        <select id="electric" multiple onchange="updateQuote()">
+          <option value="0">LED崁燈 (含施工) - 依盞數報價</option>
+          <option value="0">開關插座更換 (含施工) - 依組數報價</option>
+          <option value="0">開關插座新增與延長 (含施工) - 依組數報價</option>
+          <option value="0">開關專用迴路 (含施工) - 依組數報價</option>
+          <option value="0">接強弱電專用迴路 (含施工) - 依組數報價</option>
+        </select>
+      </div>
 
-    <!-- 結果 -->
-    <div id="result" class="result-box">
-      <p>已選項目：</p>
-      <ul id="selectedItems"></ul>
-      <p>總價：<strong id="total">0</strong> 元</p>
-      <p>👉 請截圖此畫面回報</p>
+      <!-- 結果 -->
+      <div id="result" class="result-box">
+        <p>已選項目：</p>
+        <ul id="selectedItems"></ul>
+        <p>總價：<strong id="total">0</strong> 元</p>
+        <p>👉 請截圖此畫面回報</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- JS 放在 body 結尾 -->
 <script>
 function updateQuote() {
-  const categories = ["ceiling","wall","special","other","floor","wood","paint","electric"];
+  const categories = [
+    {id: "ceiling", qty: "ceilingQty"},
+    {id: "wall", qty: "wallQty"},
+    {id: "special", qty: "specialQty"},
+    {id: "other", qty: "otherQty"},
+    {id: "floor", qty: "floorQty"},
+    {id: "wood", qty: "woodQty"},
+    {id: "paint", qty: "paintQty"},
+    {id: "electric", qty: "electricQty"}
+  ];
+
   let sum = 0;
   let list = "";
 
   categories.forEach(cat => {
-    const select = document.getElementById(cat);
-    [...select.selectedOptions].forEach(opt => {
-      const price = parseInt(opt.value, 10);
-      list += `<li>${opt.text}</li>`;
-      if (!isNaN(price)) sum += price;
-    });
+    const select = document.getElementById(cat.id);
+    const qtyInput = document.getElementById(cat.qty);
+    const qty = parseFloat(qtyInput.value) || 1;
+
+    if (select) {
+      [...select.selectedOptions].forEach(opt => {
+        const price = parseInt(opt.value, 10);
+        const text = opt.text;
+        let subtotal = 0;
+
+        if (!isNaN(price)) {
+          subtotal = price * qty;
+          sum += subtotal;
+        }
+
+        list += `<li>${text} × ${qty} = ${subtotal} 元</li>`;
+      });
+    }
   });
 
-  document.getElementById("selectedItems").innerHTML = list;
+  document.getElementById("selectedItems").innerHTML = list || "<li>尚未選擇項目</li>";
   document.getElementById("total").textContent = sum;
 }
 </script>
 
+</body>
+</html>
