@@ -1,43 +1,153 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <title>我的一頁式網站</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>一潔倍清潔｜專業居家與商業清潔服務</title>
+  <meta name="description" content="一潔倍清潔提供居家清潔、辦公室清潔、地毯深層清潔與浴廚保養，專業團隊、透明價格、準時到府。" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;600;700&display=swap" rel="stylesheet" />
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>歡迎來到我的網站</h1>
-        <nav>
-            <a href="#about">關於我</a>
-            <a href="#services">服務</a>
-            <a href="#contact">聯絡</a>
-        </nav>
-    </header>
-    <section id="about">
-        <h2>關於我</h2>
-        <p>這裡可以介紹自己或公司。</p>
-    </section>
-    <section id="services">
-        <h2>服務項目</h2>
-        <ul>
-            <li>網站設計</li>
-            <li>程式開發</li>
-            <li>顧問諮詢</li>
+
+  <!-- 導覽列 -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <a href="#" class="brand">一潔倍清潔</a>
+      <button class="nav-toggle" aria-label="切換選單">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">關於我們</a></li>
+        <li><a href="#services">服務項目</a></li>
+        <li><a href="#gallery">成果展示</a></li>
+        <li><a href="#contact" class="btn btn-outline">立即預約</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 首屏 Banner：品牌圖 + 標語 -->
+  <header class="hero">
+    <div class="hero-media">
+      <!-- 2.png/3.png 是含公司資訊的品牌圖，你可替換其一 -->
+      <img src="img/2.png" alt="一潔倍清潔 品牌與聯絡資訊" class="hero-brand" />
+    </div>
+    <div class="hero-text container">
+      <h1>專業清潔，讓空間煥然一新</h1>
+      <p class="subtitle">居家 · 辦公 · 商業空間｜透明報價｜準時到府</p>
+      <a href="#contact" class="btn btn-primary">預約服務</a>
+    </div>
+  </header>
+
+  <!-- 關於我們 -->
+  <section id="about" class="section about">
+    <div class="container about-inner">
+      <div class="about-text">
+        <h2>關於我們</h2>
+        <p>
+          我們是一潔倍清潔，專注居家與商業場域的專業清潔與保養服務。以標準化流程、環保清潔用品與細緻品質為核心，讓每位客戶都能安心把空間交給我們。
+        </p>
+        <ul class="feature-list">
+          <li><strong>標準SOP：</strong>一致品質、清潔到位</li>
+          <li><strong>環保用材：</strong>安全、低刺激、友善居家</li>
+          <li><strong>準時到府：</strong>預約準時、服務透明</li>
         </ul>
-    </section>
-    <section id="contact">
+      </div>
+      <div class="about-media">
+        <!-- 7/9/11.jpg 可任選一張作為關於我們的形象圖 -->
+        <img src="img/7.jpg" alt="乾淨舒適的室內空間" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 服務項目 -->
+  <section id="services" class="section services">
+    <div class="container">
+      <h2>服務項目</h2>
+      <p class="section-lead">依您的需求提供彈性方案，一次性清潔、定期保養皆可安排。</p>
+      <div class="service-grid">
+        <article class="service-card">
+          <img src="img/4.jpg" alt="擦拭玻璃居家清潔" />
+          <h3>居家清潔</h3>
+          <p>客廳、臥室與窗玻璃徹底清潔，維持每日舒適生活品質。</p>
+        </article>
+        <article class="service-card">
+          <img src="img/5.jpg" alt="辦公室地毯吸塵清潔" />
+          <h3>辦公室清潔</h3>
+          <p>工位、公共區域與會議室維護，提升團隊工作效率與形象。</p>
+        </article>
+        <article class="service-card">
+          <img src="img/6.jpg" alt="地面拖洗深層清潔" />
+          <h3>地毯／地面深層清潔</h3>
+          <p>深層去汙與除塵，延長地毯與地板壽命，還原潔淨質感。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 成果展示 -->
+  <section id="gallery" class="section gallery">
+    <div class="container">
+      <h2>清潔成果</h2>
+      <p class="section-lead">實際案例呈現，讓您更放心把空間交給我們。</p>
+      <div class="gallery-grid">
+        <figure class="gallery-item">
+          <img src="img/8.jpg" alt="浴室清潔成果" />
+          <figcaption>浴室｜水漬與黏汙去除</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/10.jpg" alt="廚房清潔成果" />
+          <figcaption>廚房｜油垢與檯面還原</figcaption>
+        </figure>
+        <figure class="gallery-item">
+          <img src="img/12.jpg" alt="客廳清潔成果" />
+          <figcaption>客廳｜全面除塵與整理</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 聯絡我們 -->
+  <section id="contact" class="section contact">
+    <div class="container contact-inner">
+      <div class="contact-info">
         <h2>聯絡我們</h2>
-        <form>
-            <input type="text" placeholder="您的名字">
-            <input type="email" placeholder="您的 Email">
-            <textarea placeholder="您的訊息"></textarea>
-            <button type="submit">送出</button>
-        </form>
-    </section>
-    <footer>
-        <p>© 2025 我的網站</p>
-    </footer>
-    <script src="script.js"></script>
+        <p>歡迎透過以下方式預約或諮詢，我們會在工作時段內盡速回覆。</p>
+        <ul class="contact-list">
+          <li><strong>電話：</strong><a href="tel:0912345678">0912-345-678</a></li>
+          <li><strong>Email：</strong><a href="mailto:info@cleaning.com">info@cleaning.com</a></li>
+          <li><strong>LINE：</strong><a href="https://line.me/ti/p/xxxx" target="_blank" rel="noopener">加入好友預約</a></li>
+        </ul>
+        <a href="tel:0912345678" class="btn btn-primary">立即來電預約</a>
+      </div>
+      <div class="contact-brand">
+        <!-- 再次放上品牌圖，加強辨識 -->
+        <img src="img/3.png" alt="一潔倍清潔 品牌識別" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 頁尾 -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© 2025 一潔倍清潔. 版權所有</p>
+      <nav class="footer-nav">
+        <a href="#about">關於我們</a>
+        <a href="#services">服務</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- 可選：行動版選單切換（無第三方依賴） -->
+  <script>
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      links.classList.toggle('open');
+    });
+  </script>
 </body>
 </html>
